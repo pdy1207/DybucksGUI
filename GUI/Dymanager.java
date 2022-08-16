@@ -13,9 +13,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class Dymanager extends Frame implements ActionListener {
-	public static void main(String[] args) {
-		Dymanager d = new Dymanager();
-	}
+	
 	String coffee[][] = new String[6][4];
 	
 	private Dimension dimen, dimen1;
@@ -27,33 +25,33 @@ public class Dymanager extends Frame implements ActionListener {
 	
 	Label lbTitle = new Label("DyBucks manager");
 	
-	Label lbProduct  = new Label("»óÇ°",Label.CENTER);
-	Label lbProduct2 = new Label("»óÇ°2",Label.CENTER);
-	Label lbProduct3 = new Label("»óÇ°3",Label.CENTER);
-	Label lbProduct4 = new Label("»óÇ°4",Label.CENTER);
-	Label lbProduct5 = new Label("»óÇ°5",Label.CENTER);
-	Label lbProduct6 = new Label("»óÇ°6",Label.CENTER);
+	Label lbProduct  = new Label("ìƒí’ˆ",Label.CENTER);
+	Label lbProduct2 = new Label("ìƒí’ˆ2",Label.CENTER);
+	Label lbProduct3 = new Label("ìƒí’ˆ3",Label.CENTER);
+	Label lbProduct4 = new Label("ìƒí’ˆ4",Label.CENTER);
+	Label lbProduct5 = new Label("ìƒí’ˆ5",Label.CENTER);
+	Label lbProduct6 = new Label("ìƒí’ˆ6",Label.CENTER);
 	
-	Label lbName  = new Label("ÀÌ¸§ : ",Label.CENTER);
-	Label lbName2 = new Label("ÀÌ¸§ : ",Label.CENTER);
-	Label lbName3 = new Label("ÀÌ¸§ : ",Label.CENTER);
-	Label lbName4 = new Label("ÀÌ¸§ : ",Label.CENTER);
-	Label lbName5 = new Label("ÀÌ¸§ : ",Label.CENTER);
-	Label lbName6 = new Label("ÀÌ¸§ : ",Label.CENTER);
+	Label lbName  = new Label("ì´ë¦„ : ",Label.CENTER);
+	Label lbName2 = new Label("ì´ë¦„ : ",Label.CENTER);
+	Label lbName3 = new Label("ì´ë¦„ : ",Label.CENTER);
+	Label lbName4 = new Label("ì´ë¦„ : ",Label.CENTER);
+	Label lbName5 = new Label("ì´ë¦„ : ",Label.CENTER);
+	Label lbName6 = new Label("ì´ë¦„ : ",Label.CENTER);
 	
-	Label lbCoffeeCnt  = new Label("¼ö·® : ",Label.CENTER);
-	Label lbCoffeeCnt2 = new Label("¼ö·® : ",Label.CENTER);
-	Label lbCoffeeCnt3 = new Label("¼ö·® : ",Label.CENTER);
-	Label lbCoffeeCnt4 = new Label("¼ö·® : ",Label.CENTER);
-	Label lbCoffeeCnt5 = new Label("¼ö·® : ",Label.CENTER);
-	Label lbCoffeeCnt6 = new Label("¼ö·® : ",Label.CENTER);
+	Label lbCoffeeCnt  = new Label("ìˆ˜ëŸ‰ : ",Label.CENTER);
+	Label lbCoffeeCnt2 = new Label("ìˆ˜ëŸ‰ : ",Label.CENTER);
+	Label lbCoffeeCnt3 = new Label("ìˆ˜ëŸ‰ : ",Label.CENTER);
+	Label lbCoffeeCnt4 = new Label("ìˆ˜ëŸ‰ : ",Label.CENTER);
+	Label lbCoffeeCnt5 = new Label("ìˆ˜ëŸ‰ : ",Label.CENTER);
+	Label lbCoffeeCnt6 = new Label("ìˆ˜ëŸ‰ : ",Label.CENTER);
 	
-	Label lbCoffeePrice  = new Label("°¡°İ : ",Label.CENTER);
-	Label lbCoffeePrice2 = new Label("°¡°İ : ",Label.CENTER);
-	Label lbCoffeePrice3 = new Label("°¡°İ : ",Label.CENTER);
-	Label lbCoffeePrice4 = new Label("°¡°İ : ",Label.CENTER);
-	Label lbCoffeePrice5 = new Label("°¡°İ : ",Label.CENTER);
-	Label lbCoffeePrice6 = new Label("°¡°İ : ",Label.CENTER);
+	Label lbCoffeePrice  = new Label("ê°€ê²© : ",Label.CENTER);
+	Label lbCoffeePrice2 = new Label("ê°€ê²© : ",Label.CENTER);
+	Label lbCoffeePrice3 = new Label("ê°€ê²© : ",Label.CENTER);
+	Label lbCoffeePrice4 = new Label("ê°€ê²© : ",Label.CENTER);
+	Label lbCoffeePrice5 = new Label("ê°€ê²© : ",Label.CENTER);
+	Label lbCoffeePrice6 = new Label("ê°€ê²© : ",Label.CENTER);
 	
 	TextField tfCoffeeName  = new TextField();
 	TextField tfCoffeeName2 = new TextField();
@@ -76,25 +74,25 @@ public class Dymanager extends Frame implements ActionListener {
 	TextField tfPrice5 = new TextField();
 	TextField tfPrice6 = new TextField();
 	
-	Button btnCoffee  = new Button("Àû¿ë");
-	Button btnCoffee2 = new Button("Àû¿ë");
-	Button btnCoffee3 = new Button("Àû¿ë");
-	Button btnCoffee4 = new Button("Àû¿ë");
-	Button btnCoffee5 = new Button("Àû¿ë");
-	Button btnCoffee6 = new Button("Àû¿ë");
+	Button btnCoffee  = new Button("ì ìš©");
+	Button btnCoffee2 = new Button("ì ìš©");
+	Button btnCoffee3 = new Button("ì ìš©");
+	Button btnCoffee4 = new Button("ì ìš©");
+	Button btnCoffee5 = new Button("ì ìš©");
+	Button btnCoffee6 = new Button("ì ìš©");
 	
-	Button btbefore = new Button("Ã³À½À¸·Î");
-	Button btbefore2 = new Button("ÀÌÀü");
-	Button btLookup = new Button("Á¶È¸");
+	Button btbefore = new Button("ì²˜ìŒìœ¼ë¡œ");
+	Button btbefore2 = new Button("ì´ì „");
+	Button btLookup = new Button("ì¡°íšŒ");
 	
 	Dymanager(){
-		super("°ü¸®ÀÚÈ­¸é");
+		super("ê´€ë¦¬ìí™”ë©´");
 		this.setSize(900,650);
 		this.setVisible(true);
 		this.center();
 		this.start();
 		this.init();
-		//DB¿¬µ¿
+		//DBì—°ë™
 		getData();
 	}
 	void start() {
@@ -111,14 +109,14 @@ public class Dymanager extends Frame implements ActionListener {
 	}
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource()==btbefore) {
-			msg("Ã³À½À¸·Î µ¹¾Æ°©´Ï´Ù.");
+			msg("ì²˜ìŒìœ¼ë¡œ ëŒì•„ê°‘ë‹ˆë‹¤.");
 			Dymain Dy = new Dymain();
 			this.setVisible(false);
-		}//Ã³À½À¸·Î
+		}//ì²˜ìŒìœ¼ë¡œ
 		if(e.getSource()==btbefore2) {
 			Dycoffee Dy = new Dycoffee();
 			this.setVisible(false);
-		}//ÀÌÀü
+		}//ì´ì „
 		
 		String coffeename  = tfCoffeeName.getText();
 		String coffeename2 = tfCoffeeName2.getText();
@@ -181,21 +179,21 @@ public class Dymanager extends Frame implements ActionListener {
 		}
 		
 	}
-	boolean update(int idx, String name, String amount, String price) { //¾÷µ¥ÀÌÆ®
+	boolean update(int idx, String name, String amount, String price) { //ì—…ë°ì´íŠ¸
 		Connection dc = null;
 		
 		try {
 			Class.forName("org.gjt.mm.mysql.Driver");
-			System.out.println("µå¶óÀÌºê°¡ ÀÖ½À´Ï´ç~! ^_^v");
+			System.out.println("ë“œë¼ì´ë¸Œê°€ ìˆìŠµë‹ˆë‹¹~! ^_^v");
 		} catch (ClassNotFoundException ee) {
-			System.out.println("µå¶óÀÌºê ¾øÀ½!!");
+			System.out.println("ë“œë¼ì´ë¸Œ ì—†ìŒ!!");
 		}
 		
 		Connection conn = null;
 		String url = "jdbc:mysql://127.0.0.1:3306/dybucks?"
 				+ "useUnicode=true&characterEncoding=utf8";
 		String user = "root";// ID
-		String password = "qwer";// ºñ¹Ğ¹øÈ£
+		String password = "qwer";// ë¹„ë°€ë²ˆí˜¸
 		try {
 			dc = DriverManager.getConnection(url, user, password);
 		} catch (SQLException ee) {
@@ -209,22 +207,22 @@ public class Dymanager extends Frame implements ActionListener {
 			pstmt.setInt(4, idx);
 			pstmt.executeUpdate();
 			pstmt.close();
-			msg("¼öÁ¤¿Ï·á!");
+			msg("ìˆ˜ì •ì™„ë£Œ!");
 		} catch (SQLException ee) {
-			System.err.println("È¸¿ø Á¤º¸¼öÁ¤ ½ÇÆĞ!!"+ee.getMessage());
+			System.err.println("íšŒì› ì •ë³´ìˆ˜ì • ì‹¤íŒ¨!!"+ee.getMessage());
 			return false;
 		}
 		return true;
 	}
-	boolean spaceChcek(String name, String amount, String price) {  //¸Ş¼¼Áö Á¤¸®
-		if(name.equals("")) {msg("Ä¿ÇÇ¸íÀ» Àû¾îÁÖ¼¼¿ä.");     return true;}
-		if(amount.equals("")) {msg("¼ö·®À» Àû¾îÁÖ¼¼¿ä."); 	  return true;}
-		if(price.equals("")) {msg("°¡°İÀ» Àû¾îÁÖ¼¼¿ä.");  	  return true;}
-		//°ø¹éÀÌ ¾Æ´Ï¸é false
+	boolean spaceChcek(String name, String amount, String price) {  //ë©”ì„¸ì§€ ì •ë¦¬
+		if(name.equals("")) {msg("ì»¤í”¼ëª…ì„ ì ì–´ì£¼ì„¸ìš”.");     return true;}
+		if(amount.equals("")) {msg("ìˆ˜ëŸ‰ì„ ì ì–´ì£¼ì„¸ìš”."); 	  return true;}
+		if(price.equals("")) {msg("ê°€ê²©ì„ ì ì–´ì£¼ì„¸ìš”.");  	  return true;}
+		//ê³µë°±ì´ ì•„ë‹ˆë©´ false
 		return false;
 	}
 	
-	void getData() { //È­¸é¿¡ »Ñ·ÁÁÖ±â
+	void getData() { //í™”ë©´ì— ë¿Œë ¤ì£¼ê¸°
 		try {
 			Class.forName("org.gjt.mm.mysql.Driver");
 		} catch (ClassNotFoundException ee) {
@@ -250,7 +248,7 @@ public class Dymanager extends Frame implements ActionListener {
 				coffee[count][3] = rs.getString("price");
 				count++;
 				}
-				//È­¸é »Ñ¸®±â
+				//í™”ë©´ ë¿Œë¦¬ê¸°
 					tfCoffeeName.setText(coffee[0][1]);
 					tfCnt.setText(coffee[0][2]);
 					tfPrice.setText(coffee[0][3]);
@@ -322,7 +320,7 @@ public class Dymanager extends Frame implements ActionListener {
 		btLookup.setFont(font20);btLookup.setBounds(450,80,110,50);
 		
 		lbTitle.setFont(font30); lbTitle.setBounds(130,70,300,50);
-		//Ä¿ÇÇ 1.
+		//ì»¤í”¼ 1.
 		lbProduct.setFont(font20); lbProduct.setBounds(50,180,80,50);
 		lbName.setFont(font20); lbName.setBounds(130,180,80,50);
 		tfCoffeeName.setFont(font20); tfCoffeeName.setBounds(210,190,160,30);
@@ -331,7 +329,7 @@ public class Dymanager extends Frame implements ActionListener {
 		lbCoffeePrice.setFont(font20); lbCoffeePrice.setBounds(530,190,80,30);
 		tfPrice.setFont(font20); tfPrice.setBounds(610,190,110,30);
 		btnCoffee.setFont(font20); btnCoffee.setBounds(750,180,110,50);
-		//Ä¿ÇÇ 2.
+		//ì»¤í”¼ 2.
 		lbProduct2.setFont(font20); lbProduct2.setBounds(50,250,80,50);
 		lbName2.setFont(font20); lbName2.setBounds(130,250,80,50);
 		tfCoffeeName2.setFont(font20); tfCoffeeName2.setBounds(210,260,160,30);
@@ -340,7 +338,7 @@ public class Dymanager extends Frame implements ActionListener {
 		lbCoffeePrice2.setFont(font20); lbCoffeePrice2.setBounds(530,260,80,30);
 		tfPrice2.setFont(font20); tfPrice2.setBounds(610,260,110,30);
 		btnCoffee2.setFont(font20); btnCoffee2.setBounds(750,250,110,50);
-		//Ä¿ÇÇ 3.
+		//ì»¤í”¼ 3.
 		lbProduct3.setFont(font20); lbProduct3.setBounds(50,320,80,50);
 		lbName3.setFont(font20); lbName3.setBounds(130,320,80,50);
 		tfCoffeeName3.setFont(font20); tfCoffeeName3.setBounds(210,330,160,30);
@@ -349,7 +347,7 @@ public class Dymanager extends Frame implements ActionListener {
 		lbCoffeePrice3.setFont(font20); lbCoffeePrice3.setBounds(530,330,80,30);
 		tfPrice3.setFont(font20); tfPrice3.setBounds(610,330,110,30);
 		btnCoffee3.setFont(font20); btnCoffee3.setBounds(750,320,110,50);
-		//Ä¿ÇÇ 4.
+		//ì»¤í”¼ 4.
 		lbProduct4.setFont(font20); lbProduct4.setBounds(50,390,80,50);
 		lbName4.setFont(font20); lbName4.setBounds(130,390,80,50);
 		tfCoffeeName4.setFont(font20); tfCoffeeName4.setBounds(210,400,160,30);
@@ -358,7 +356,7 @@ public class Dymanager extends Frame implements ActionListener {
 		lbCoffeePrice4.setFont(font20); lbCoffeePrice4.setBounds(530,400,80,30);
 		tfPrice4.setFont(font20); tfPrice4.setBounds(610,400,110,30);
 		btnCoffee4.setFont(font20); btnCoffee4.setBounds(750,390,110,50);
-		//Ä¿ÇÇ 5.
+		//ì»¤í”¼ 5.
 		lbProduct5.setFont(font20); lbProduct5.setBounds(50,460,80,50);
 		lbName5.setFont(font20); lbName5.setBounds(130,460,80,50);
 		tfCoffeeName5.setFont(font20); tfCoffeeName5.setBounds(210,470,160,30);
@@ -367,7 +365,7 @@ public class Dymanager extends Frame implements ActionListener {
 		lbCoffeePrice5.setFont(font20); lbCoffeePrice5.setBounds(530,470,80,30);
 		tfPrice5.setFont(font20); tfPrice5.setBounds(610,470,110,30);
 		btnCoffee5.setFont(font20); btnCoffee5.setBounds(750,460,110,50);
-		//Ä¿ÇÇ 6.
+		//ì»¤í”¼ 6.
 		lbProduct6.setFont(font20); lbProduct6.setBounds(50,530,80,50);
 		lbName6.setFont(font20); lbName6.setBounds(130,530,80,50);
 		tfCoffeeName6.setFont(font20); tfCoffeeName6.setBounds(210,540,160,30);
@@ -392,12 +390,12 @@ public class Dymanager extends Frame implements ActionListener {
 		});
 	}
 	public void paint(Graphics g) {	
-		g.drawImage(imgSel, 30, 50, 80, 80, this); //¼±ÅÃ»óÇ°
+		g.drawImage(imgSel, 30, 50, 80, 80, this); //ì„ íƒìƒí’ˆ
 		
 }
 	void msg(String msg)
 	{
-		final Dialog dlg = new Dialog(this, "¾Ë¸² ¸Ş¼¼ÁöÃ¢", true);
+		final Dialog dlg = new Dialog(this, "ì•Œë¦¼ ë©”ì„¸ì§€ì°½", true);
 		dlg.setLayout(null);
 		Label lbMsg = new Label(msg);
 		
